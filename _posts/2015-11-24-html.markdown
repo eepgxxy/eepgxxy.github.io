@@ -1,0 +1,45 @@
+---
+layout: post
+title:  "HTML is the Skeleton of the Web!"
+date:   2015-11-24 22:26:24 +0800
+categories: course web basics
+---
+HTML stands for Hyper Text Markup Language and it serves the base of the Web.
+
+HTML (somethimes together with CSS and Javascript) tells how to display the information in the web to the end users.
+
+The following figure shows some of the HTML semantic tags:
+
+![Image description](/images/semantic-tag.jpg)
+
+Some key points of HTML:
+
+* HTML is supposed to act as the skeleton of the web page.
+* HTML should be used according to their semantic meanings.
+* Styling the page should not be the purpose of HTML.
+
+A typical example skeleton code of HTML:
+
+{% highlight html %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>example code of HTML</title>
+</head>
+<body>
+	<h1>Hello world</h1>
+</body>
+</html>
+#=> prints 'Hello world' to STDOUT.
+{% endhighlight %}
+
+Check out the easy to follow book [HTML&CSS: Design and Build Websites][html-book] for more info on how to get the most out of HTML. A basic and comprehensive HTML knowlege base is [Mozilla Developer Network][mozilla-developer-network]. The more academic and theoretic resource for HTML is in the standardization body website [W3C][w3]. If you have questions, you can drop me an email `below`.
+
+[html-book]: http://www.amazon.com
+[mozilla-developer-network]:   http://developer.mozilla.org/
+[w3]: http://www.w3.org/
+[my-email]: xdyang@zjgsu.edu.cn
+
+
+

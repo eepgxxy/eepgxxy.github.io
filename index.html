@@ -4,8 +4,20 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <h1 class="page-heading">The Web Course Information</h1>
 
+ {% if post.image %}
+              <div class="image-holder show">
+                <a href="{{ post.url | prepend: site.baseurl }}" class="inner" style="background-image: url('{{ site.baseurl }}/images/{{ post.image }}');">
+                  <img src="{{ site.baseurl }}/images/{{ post.image }}">
+              </a>
+            </div>
+{% endif %}
+
+<div class="thumbnail">
+  <img src="images/main.jpg" alt="octojekyll">
+  
+  </div>
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
@@ -15,9 +27,15 @@ layout: default
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
       </li>
+      <div class="text">
+              <p>{{ post.excerpt }}</p>
+              <a href="{{ post.url | prepend: site.baseurl }}" class="readmore">Continue Reading</a>
+          </div>
     {% endfor %}
   </ul>
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+  
 
 </div>
