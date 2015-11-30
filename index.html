@@ -6,23 +6,19 @@ layout: default
 
   <h1 class="page-heading">The Web Course Information</h1>
 
- {% if post.image %}
-              <div class="image-holder show">
-                <a href="{{ post.url | prepend: site.baseurl }}" class="inner" style="background-image: url('{{ site.baseurl }}/images/{{ post.image }}');">
-                  <img src="{{ site.baseurl }}/images/{{ post.image }}">
-              </a>
-            </div>
-{% endif %}
-
 <div class="thumbnail">
-  <img src="images/main.jpg" alt="octojekyll">
-  
-  </div>
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+ {% if paginator.page == 1 %}
+        <img src="images/homepage.jpg" alt="octojekyll-homepage">
+      {% else %}
+        <img src="../../images/homepage.jpg" alt="octojekyll-homepage">
+      {% endif %}
+</div>
 
+{% for post in paginator.posts %} 
+  <ul class="post-list">
+      <li>
+        <hr>
+        <span class="post-meta">{{post.date | date: "%b %-d, %Y" }}</span>
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
@@ -30,12 +26,46 @@ layout: default
       <div class="text">
               <p>{{ post.excerpt }}</p>
               <a href="{{ post.url | prepend: site.baseurl }}" class="readmore">Continue Reading</a>
-          </div>
-    {% endfor %}
+      </div>
   </ul>
-
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-  
+{% endfor %}  
 
 </div>
+
+<div class="pagination">
+  {% if paginator.previous_page %}
+    {% if paginator.previous_page == 1 %}
+      <a href="/" class="btn">Previous</a>
+    {% else %}
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="btn">Previous</a>
+    {% endif %}
+  {% else %}
+    Previous
+  {% endif %}
+  <ul class="inline-list">
+    <li>
+      {% if paginator.page == 1 %}
+        <span class="current-page">1</span>
+      {% else %}
+        <a href="/">1</a>
+      {% endif %}
+    </li>
+    {% for count in (2..paginator.total_pages) %}
+      <li>
+        {% if count == paginator.page %}
+          <span class="current-page">{{ count }}</span>
+        {% else %}
+          <a href="/blog/page{{ count }}">{{ count }}</a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="btn">Next</a>
+  {% else %}
+    Next
+  {% endif %}
+</div><!-- /.pagination -->
+

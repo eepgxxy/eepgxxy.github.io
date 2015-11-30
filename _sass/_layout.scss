@@ -185,14 +185,13 @@
 }
 
 .page-heading {
-    font-family: "page Heading";
+    font-family: Celevenia-ExpandedRegular;
     font-size: 30px;
     margin: 50px auto;
     text-align: center;
 }
 
 .post-list {
-    font-family: 'page Heading';
     margin-left: 0;
     list-style: none;
 
@@ -207,9 +206,10 @@
 }
 
 .post-link {
+    font-family: BankHoliday-SemiexpandedRegular;
     display: block;
     font-size: 24px;
-    color: #a00;
+    
     text-decoration: none;
 
 }
@@ -226,7 +226,10 @@
     margin-bottom: $spacing-unit;
 }
 
+
+
 .post-title {
+    font-family: Newsflash;
     font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
@@ -237,6 +240,7 @@
 }
 
 .post-content {
+    text-align: justify;
     margin-bottom: $spacing-unit;
 
     h2 {
@@ -287,4 +291,29 @@
 }
 .post-list .readmore:hover {
     color: #f60;
+}
+.pagination {
+    margin: 20px 10px;
+    text-align: center;
+    ul {
+        display: inline;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    li {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+    .current-page {
+        font-weight: 700;
+    }
+}
+.inline-list {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    li {
+        list-style-type: none;
+        display: inline;
+    }
 }

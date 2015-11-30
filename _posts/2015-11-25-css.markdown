@@ -2,18 +2,17 @@
 layout: post
 title:  "CSS is for the decoration of the Web!"
 date:   2015-11-25 22:26:24 +0800
-categories: course web basics
 ---
-CSS stands for Cascading Style Sheet and it targets the styling of the Web.
+CSS stands for `Cascading Style Sheet` and it targets the styling of the Web.
 
 CSS is used to style the page. With CSS, you can have different colors, different shapes, different shadows, different font styles, etc. With CSS, what limits how you design the page is not your CSS skills but your imaginations.
 
 
 Some key points of CSS:
 
-* Always put the CSS rules in a .css file and link it in the HTML page.
-* Pay attention to the cascading weight of different rules.
-* Practise, practise and practise to be a CSS guru.
+* :bell: Always put the CSS rules in a .css file and link it in the HTML page.
+* :bell: Pay attention to the cascading weight of different rules.
+* :bell: Practise, practise and practise to be a CSS guru.
 
 A typical example code of CSS:
 
@@ -28,12 +27,12 @@ div {
 #=> make a green div with the size of 200 * 200 centered in the page
 {% endhighlight %}
 
-Check out the easy to follow same book [HTML&CSS: Design and Build Websites][html-book] for more info about CSS. And the same basic and comprehensive HTML knowlege base is [Mozilla Developer Network][mozilla-developer-network]. And the same academic and theoretic resource for HTML is in the standardization body website [W3C][w3]. If you have questions, you can drop me an email `below`.
+Search and check out the easy to follow same book :book: [HTML&CSS: Design and Build Websites][html-book] for more info about CSS. And the same basic and comprehensive HTML knowlege base is :link: [Mozilla Developer Network][mozilla-developer-network]. And the same academic and theoretic resource for HTML is in the standardization body website :link: [W3C][w3]. If you have questions, you can drop me an email :e-mail: `below`.
 
 [html-book]: http://www.amazon.com
 [mozilla-developer-network]:   http://developer.mozilla.org/
 [w3]: http://www.w3.org/
-[my-email]: xdyang@zjgsu.edu.cn
+
 
 
 
