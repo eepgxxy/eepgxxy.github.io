@@ -52,7 +52,7 @@ Create and put a web.xml file in the `$tomcat_home/webapps/one/WEB-INF/`. The we
   </description>
  <servlet>
  <servlet-name>MyServlet</servlet-name>
- <servlet-class>Test</servlet-class>
+ <servlet-class>One</servlet-class>
  </servlet>
  <servlet-mapping>
  <servlet-name>MyServlet</servlet-name>
