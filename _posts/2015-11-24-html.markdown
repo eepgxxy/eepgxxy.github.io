@@ -3,7 +3,7 @@ layout: post
 title:  "HTML is the Skeleton of the Web!"
 date:   2015-11-24 22:26:24 +0800
 ---
-HTML stands for `Hyper Text Markup Language` and it serves the base of the Web.
+HTML stands for **Hyper Text Markup Language** and it serves the base of the Web.
 
 HTML (somethimes together with CSS and Javascript) tells how to display the information in the web to the end users.
 
@@ -30,10 +30,10 @@ A typical example skeleton code of HTML:
 	<h1>Hello world</h1>
 </body>
 </html>
-#=> prints 'Hello world' to STDOUT.
+#=> prints 'Hello world'.
 {% endhighlight %}
 
-Search and check out the easy to follow book :book: [HTML&CSS: Design and Build Websites][html-book] for more info on how to get the most out of HTML. A basic and comprehensive HTML knowlege base is :link: [Mozilla Developer Network][mozilla-developer-network]. The more academic and theoretic resource for HTML is in the standardization body website :link: [W3C][w3]. If you have questions, you can drop me an email :e-mail: `below`.
+Search and check out the easy to follow book :book: [HTML&CSS: Design and Build Websites][html-book] for more info on how to get the most out of HTML. A basic and comprehensive HTML knowlege base is :link: [Mozilla Developer Network][mozilla-developer-network]. The more academic and theoretic resource for HTML is in the standardization body website :link: [W3C][w3]. If you have questions, you can drop me an email :e-mail: **below**.
 
 [html-book]: http://www.amazon.com
 [mozilla-developer-network]:   http://developer.mozilla.org/

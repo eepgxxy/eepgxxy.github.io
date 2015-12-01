@@ -3,7 +3,7 @@ layout: post
 title:  "JavaScript is making the web interactive!"
 date:   2015-11-29 22:26:24 +0800
 ---
-JavaScript is a `scripting language` and can run on both `clients` and `servers`.
+JavaScript is a **scripting language** and can run on both **clients** and **servers**.
 
 Similar as the other programming languages, JavaScript can be learnt from the following aspects: variables, data types, operators, reserved words, basic operations including loops, conditionals, etc.
 
@@ -12,7 +12,7 @@ Object is a very important data type in JavaScript, everything in JavaScript can
 Some key points of JavaScript:
 
 * :bell: Always put the JavaScript codes in a .js file and link it in the HTML page.
-* :bell: In most cases, you need to manipulate the `DOM` using JavaScript.
+* :bell: In most cases, you need to manipulate the **DOM** using JavaScript.
 * :bell: A lot of libraries, frameworks and tools can be utilized for JavaScript programming.
 
 A typical example code of JavaScript:
@@ -25,7 +25,7 @@ div.addEventListener("click", function() {
 #=> pop up an alert box saying "Hello World!" when you click a div
 {% endhighlight %}
 
-Search and check out the comprehensive JavaScript book for reference :book: [JavaScript: The Definitive Guide][js-book] for more info about JavaScript. And the same basic and comprehensive JavaScript knowlege base is :link: [Mozilla Developer Network][mozilla-developer-network]. The JavaScript official website is :link: [ECMAScript][ecmascript]. If you have questions, you can drop me an email :e-mail: `below`.
+Search and check out the comprehensive JavaScript book for reference :book: [JavaScript: The Definitive Guide][js-book] for more info about JavaScript. And the same basic and comprehensive JavaScript knowlege base is :link: [Mozilla Developer Network][mozilla-developer-network]. The JavaScript official website is :link: [ECMAScript][ecmascript]. If you have questions, you can drop me an email :e-mail: **below**.
 
 [js-book]: http://www.amazon.com
 [mozilla-developer-network]:   http://developer.mozilla.org/

@@ -3,7 +3,7 @@ layout: post
 title:  "CSS is for the decoration of the Web!"
 date:   2015-11-25 22:26:24 +0800
 ---
-CSS stands for `Cascading Style Sheet` and it targets the styling of the Web.
+CSS stands for **Cascading Style Sheet** and it targets the styling of the Web.
 
 CSS is used to style the page. With CSS, you can have different colors, different shapes, different shadows, different font styles, etc. With CSS, what limits how you design the page is not your CSS skills but your imaginations.
 

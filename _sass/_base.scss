@@ -100,7 +100,7 @@ a {
 
     &:hover {
         color: $text-color;
-        text-decoration: underline;
+        
     }
 }
 
@@ -220,4 +220,12 @@ pre {
 @font-face {
     font-family: Celevenia-ExpandedRegular;
     src: url(../fonts/Celevenia-ExpandedRegular.otf);
+}
+@font-face {
+    font-family: FontAwesome;
+    src: url(../fonts/FontAwesome.otf);
+}
+@font-face {
+    font-family: Nataki-SemiexpandedRegular;
+    src: url(../fonts/Nataki-SemiexpandedRegular.otf);
 }

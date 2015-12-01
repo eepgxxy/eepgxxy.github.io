@@ -7,7 +7,7 @@
 
 # Site settings
 title: Web Technologies
-description: everything about the web technologies
+description: "web course, web information, web technology"
 email: xdyang@zjgsu.edu.cn
 description: > # this means to ignore newlines until "baseurl:"
   This website provides tons of information about the web technology courses and
@@ -22,11 +22,11 @@ paginate_path: "blog/page:num/"
 # Build settings
 markdown: kramdown
 highlighter: pygments
-gems: [jemoji, jekyll-paginate]
-#gems: 
+# gems: [jemoji, jekyll-paginate]
+gems: 
 #- jekyll-mentions
-#- jemoji
-#- jekyll-paginate
+- jemoji
+- jekyll-paginate
 #- jekyll-redirect-from
 #- jekyll-sitemap
 
