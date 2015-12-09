@@ -17,7 +17,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.webcourseinfo.com" # the base hostname & protocol for your site
 #twitter_username: jekyllrb
 #github_username:  jekyll
-permalink: /:categories/:title
+permalink: /:title
 paginate: 5
 paginate_path: "blog/page:num/"
 # Build settings
