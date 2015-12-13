@@ -4,12 +4,8 @@ layout: default
 
 <div class="home">
   <h1 class="page-heading">The Web Course Information</h1>
-  <div class="thumbnail">
-    {% if paginator.page == 1 %}
-      <img src="images/homepage.jpg" alt="octojekyll-homepage">
-    {% else %}
-      <img src="../../images/homepage.jpg" alt="octojekyll-homepage">
-    {% endif %}
+  <div class="gallery">
+  {% include gallery.html %}
   </div>
   <!-- posts -->
   <div class="posts">
