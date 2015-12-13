@@ -19,7 +19,7 @@ url: "http://www.webcourseinfo.com" # the base hostname & protocol for your site
 #github_username:  jekyll
 permalink: /:categories/:title
 paginate: 5
-paginate_path: "/blog/page:num/"
+paginate_path: "/page:num/"
 # Build settings
 markdown: kramdown
 highlighter: pygments
