@@ -1,0 +1,53 @@
+.post-list {
+    margin-left: 0;
+    list-style: none;
+    .text {
+        font-size: 18px;
+        line-height: 1.7em;
+        max-width: 100%;
+        text-align: justify;
+        word-wrap: break-word;
+        margin-bottom: 0;
+        .readmore {
+            font-style: italic;
+            color: rgba(.8,.8,.8,.5);
+            &:hover {
+                color: #f60;
+            }
+        }
+    }
+    > li {
+        margin-bottom: $spacing-unit;
+    }
+    
+}
+
+.post-meta {
+    font-size: $small-font-size;
+    color: $grey-color;
+}
+
+.post-link {
+    font-family: BankHoliday-SemiexpandedRegular;
+    display: block;
+    font-size: 24px;
+
+    color: #000;
+    text-decoration: none;
+
+    &:visited {
+        color: darken($brand-color, 15%);
+    }
+
+    &:hover {
+        color: $brand-color;
+    }
+}
+.rss-subscribe {
+    margin-left: 5px;
+    margin-bottom: 0;
+}
+.iconRss::before {
+    font-family: FontAwesome;
+    content: "\f09e";
+}

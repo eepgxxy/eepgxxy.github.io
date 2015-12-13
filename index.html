@@ -3,68 +3,22 @@ layout: default
 ---
 
 <div class="home">
-
   <h1 class="page-heading">The Web Course Information</h1>
-
-<div class="thumbnail">
- {% if paginator.page == 1 %}
-        <img src="images/homepage.jpg" alt="octojekyll-homepage">
-      {% else %}
-        <img src="../../images/homepage.jpg" alt="octojekyll-homepage">
-      {% endif %}
-</div>
-
-{% for post in paginator.posts %} 
-  <ul class="post-list">
-      <li>
-        <hr>
-        <span class="post-meta">{{post.date | date: "%b %-d, %Y" }}</span>
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-      <div class="text">
-              <p>{{ post.excerpt }}</p>
-              <a href="{{ post.url | prepend: site.baseurl }}" class="readmore">Continue Reading</a>
-      </div>
-  </ul>
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}"> <i class="iconRss"></i></a></p>
-
-{% endfor %}  
-
-</div>
-
-<div class="pagination">
-  {% if paginator.previous_page %}
-    {% if paginator.previous_page == 1 %}
-      <a href="/" class="btn">Previous</a>
+  <div class="thumbnail">
+    {% if paginator.page == 1 %}
+      <img src="images/homepage.jpg" alt="octojekyll-homepage">
     {% else %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="btn">Previous</a>
+      <img src="../../images/homepage.jpg" alt="octojekyll-homepage">
     {% endif %}
-  {% else %}
-    Previous
-  {% endif %}
-  <ul class="inline-list">
-    <li>
-      {% if paginator.page == 1 %}
-        <span class="current-page">1</span>
-      {% else %}
-        <a href="/">1</a>
-      {% endif %}
-    </li>
-    {% for count in (2..paginator.total_pages) %}
-      <li>
-        {% if count == paginator.page %}
-          <span class="current-page">{{ count }}</span>
-        {% else %}
-          <a href="/blog/page{{ count }}">{{ count }}</a>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="btn">Next</a>
-  {% else %}
-    Next
-  {% endif %}
-</div><!-- /.pagination -->
+  </div>
+  <!-- posts -->
+  <div class="posts">
+    {% for post in paginator.posts %} 
+      {% include posts.html %}
+    {% endfor %}  
+  </div>
+  <!-- pagination -->
+  <div class="pagination">
+  {% include pagination.html %}
+  </div>
+</div>

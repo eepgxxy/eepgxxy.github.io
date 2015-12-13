@@ -94,6 +94,31 @@
     }
 }
 
+/**
+ * page content in the homepage
+ */
+
+.home {
+    width: 800px;
+    margin: auto;
+    .thumbnail {
+        text-align: center;
+    }
+    .pagination {
+        margin: 20px 10px;
+        text-align: center;
+    }
+}
+.page-content {
+    padding: $spacing-unit 0;
+}
+
+.page-heading {
+    font-family: Celevenia-ExpandedRegular;
+    font-size: 30px;
+    margin: 50px auto;
+    text-align: center;
+}
 
 
 /**
@@ -109,8 +134,7 @@
     margin-bottom: $spacing-unit / 2;
 }
 
-.contact-list,
-.social-media-list {
+.contact-list {
     list-style: none;
     margin-left: 0;
 }
@@ -142,6 +166,11 @@
 .footer-copyright {
     text-align: center;
     font-size: 0.8em;
+    .icon-heart::before {
+        font-family: FontAwesome;
+        content: "\f004";
+        color: #f00;
+    }
 }
 
 @include media-query($on-laptop) {
@@ -166,165 +195,6 @@
 }
 
 
-
-/**
- * Page content
- */
-.page-content {
-    padding: $spacing-unit 0;
-}
-
-.page-heading {
-    font-family: Celevenia-ExpandedRegular;
-    font-size: 30px;
-    margin: 50px auto;
-    text-align: center;
-}
-
-.post-list {
-    margin-left: 0;
-    list-style: none;
-
-    > li {
-        margin-bottom: $spacing-unit;
-    }
-}
-
-.post-meta {
-    font-size: $small-font-size;
-    color: $grey-color;
-}
-
-.post-link {
-    font-family: BankHoliday-SemiexpandedRegular;
-    display: block;
-    font-size: 24px;
-
-    color: #000;
-    text-decoration: none;
-
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
-
-    &:hover {
-        color: $brand-color;
-    }
-
-
-}
-
-
-
-
-/**
- * Posts
- */
-.post-header {
-    margin-bottom: $spacing-unit;
-}
-
-
-
-.post-title {
-    font-family: Newsflash;
-    font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1;
-
-    @include media-query($on-laptop) {
-        font-size: 36px;
-    }
-}
-
-.post-content {
-    text-align: justify;
-    margin-bottom: $spacing-unit;
-
-    h2 {
-        font-size: 32px;
-
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
-    }
-
-    h3 {
-        font-size: 26px;
-
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
-    }
-
-    h4 {
-        font-size: 20px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
-    }
-}
-
-.home {
-    width: 800px;
-    margin: auto;
-}
-.thumbnail {
-    text-align: center;
-}
-.post-list .text {
-    font-size: 18px;
-    line-height: 1.7em;
-    max-width: 100%;
-    text-align: justify;
-    word-wrap: break-word;
-    margin-bottom: $spacing-unit * 2;
-
-}
-.post-list .readmore {
-   font-style: italic;
-   color: rgba(.8,.8,.8,.5);
- 
-}
-.post-list .readmore:hover {
-    color: #f60;
-}
-.pagination {
-    margin: 20px 10px;
-    text-align: center;
-    ul {
-        display: inline;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-    li {
-        padding-left: 4px;
-        padding-right: 4px;
-    }
-    .current-page {
-        font-weight: 700;
-    }
-}
-.inline-list {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-    li {
-        list-style-type: none;
-        display: inline;
-    }
-}
-
-.iconRss::before {
-    font-family: FontAwesome;
-    content: "\f09e";
-}
-.icon-heart::before {
-    font-family: FontAwesome;
-    content: "\f004";
-    color: #f00;
-}
 
 .wrong-page {
     font-family: Nataki-SemiexpandedRegular;

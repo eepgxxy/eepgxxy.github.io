@@ -1,0 +1,16 @@
+<ul class="post-list">
+    <li>
+      <hr>
+      <span class="post-meta">{{post.date | date: "%b %-d, %Y" }}</span>
+      <h2>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h2>
+    
+    <div class="text">
+      <p>{{ post.content | strip_html | strip_newlines | truncate: 200 }}</p>
+      <!-- <p>{{ post.excerpt }}</p> -->
+      <a href="{{ post.url | prepend: site.baseurl }}" class="readmore">Continue Reading</a>
+    </div>
+    </li>
+</ul>
+<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}"> <i class="iconRss"></i></a></p>
