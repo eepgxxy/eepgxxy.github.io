@@ -2,6 +2,7 @@
 layout: post
 title:  "JavaScript is making the web interactive!"
 date:   2015-11-29 22:26:24 +0800
+categories: blog
 ---
 JavaScript is a **scripting language** and can run on both **clients** and **servers**.
 

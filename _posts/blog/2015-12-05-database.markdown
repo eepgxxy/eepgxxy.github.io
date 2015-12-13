@@ -2,7 +2,7 @@
 layout: post
 title: Connecting to Database from JSP
 Date: 2015-12-05 21:32:57 +0800
-
+categories: blog
 ---
 
 **Database** is almost a must-have component in dynamic web pages or applications. And this time I am focusing on the connecting to database from **JSP** using **JDBC**.

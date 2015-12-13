@@ -2,6 +2,7 @@
 layout: post
 title: "The Story behind Servlet"
 date: 2015-11-30 21:18:47 +0800
+categories: blog
 ---
 
 Servlet is a piece of code sitting at the **server side** and waiting for the information from the browsers. It then processes the information and possibly gives feedback to the browsers.

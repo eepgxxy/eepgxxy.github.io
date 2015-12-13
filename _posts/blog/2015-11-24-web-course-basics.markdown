@@ -2,6 +2,7 @@
 layout: post
 title:  "Welcome to Web Technology Course!"
 date:   2015-11-24 10:26:24 +0800
+categories: blog
 ---
 This is the course I am currently teaching in **School of Information and Electronic Engineering** in **Zhejiang Gongshang University** for the autumn semester. 
 

@@ -2,6 +2,7 @@
 layout: post
 title: "Some of the Things You should Know about JSP"
 date: 2015-12-01 16:58:15 +0800
+categories: blog
 ---
 
 JSP is designed for the less java-capable web developers to be used as a

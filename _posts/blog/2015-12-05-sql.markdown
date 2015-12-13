@@ -2,6 +2,7 @@
 layout: post
 title: The Most Fundmental SQL Commands
 date: 2015-12-05 13:49:05 +0800
+categories: blog
 ---
 
 SQL stands for **Structured Query Langauge**. It is the standardized programming language for **relational databases**. 

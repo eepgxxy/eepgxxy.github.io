@@ -2,6 +2,7 @@
 layout: post
 title: Some Notes to the Final Test
 date: 2015-12-12 22:31:30 +0800
+categories: blog
 ---
 
 I am sure that all of you are thinking about the final test at this moment. So here are some of the notes to the final test for the autumn semester course. 
