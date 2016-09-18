@@ -15,34 +15,39 @@
                 color: #f60;
             }
         }
+        
     }
     > li {
         margin-bottom: $spacing-unit;
     }
-    
-}
-
-.post-meta {
-    font-size: $small-font-size;
-    color: $grey-color;
-}
-
-.post-link {
-    font-family: BankHoliday-SemiexpandedRegular;
-    display: block;
-    font-size: 24px;
-
-    color: #000;
-    text-decoration: none;
-
-    &:visited {
-        color: darken($brand-color, 15%);
+    .post-meta {
+        font-size: $small-font-size;
+        color: $grey-color;
     }
 
-    &:hover {
-        color: $brand-color;
+    .post-link {
+        font-family: BankHoliday-SemiexpandedRegular;
+        display: block;
+        font-size: 24px;
+
+        color: #000;
+        text-decoration: none;
+
+        &:visited {
+            color: darken($brand-color, 15%);
+        }
+
+        &:hover {
+            color: $brand-color;
+        }
+        @include media-query($on-palm) {
+            font-size: 20px;
+        }
     }
 }
+
+
+
 .rss-subscribe {
     margin-left: 5px;
     margin-bottom: 0;

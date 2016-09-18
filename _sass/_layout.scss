@@ -99,8 +99,6 @@
  */
 
 .home {
-    width: 800px;
-    margin: auto;
     .gallery {
         text-align: center;
     }
@@ -108,6 +106,7 @@
         margin: 20px 10px;
         text-align: center;
     }
+
 }
 .page-content {
     padding: $spacing-unit 0;
@@ -205,5 +204,21 @@
         font-family: FontAwesome;
         content: "\f071";
         color: #f90;
+    }
+}
+
+// duoshuo.html
+.ds-thread {
+    width: $content-width - $spacing-unit;
+    margin: 0 auto;
+      @for $i from 0 through 5 {
+        @include media-query($on-laptop - $i * 40) {
+            width: $on-laptop -$i * 60;
+        }
+    }
+    @for $i from 6 through 10 {
+        @include media-query($on-laptop - $i * 40) {
+            width: $on-laptop -$i * 50;
+        }
     }
 }

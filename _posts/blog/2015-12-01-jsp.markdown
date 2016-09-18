@@ -5,8 +5,7 @@ date: 2015-12-01 16:58:15 +0800
 categories: blog
 ---
 
-JSP is designed for the less java-capable web developers to be used as a
-web **server side** programming language.
+JSP is designed for the less java-capable web developers to be used as a web **server side** programming language.
 
 However, I would argue that knowing java well still makes your jsp programming life much easier.
 Since we have already have Servlet in our programming tool box, why do we need JSP? Well, JSP

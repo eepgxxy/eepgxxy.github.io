@@ -14,6 +14,6 @@ The final test is also in the form of a in-class project assignment just as what
 * :bell: How much percent of the requirements for the topic you have finished and how well you do.
 * :bell: How long it takes for you to finish the assignment. The sooner you finish, the higher your score will be.
 * :bell: To get an `A` you have to finish it within *two* hours and to get a `B` you have to finish it within *two and half* hours.
-* :bell: Which assignment topic you choose. For each topic, we have a quota system based on the number of the students in the class. As a result, the quota for `A` is :two:, for `B` is also :two:. There are no quota for `C`, `D` and `F`. 
+* :bell: Which assignment topic you choose. For each topic, we have a quota system based on the number of the students in the class. As a result, the quota for `A` is `2`:, for `B` is also `2`. There are no quota for `C`, `D` and `F`. 
 
 So please prepare carefully and choose wisely!:dart:

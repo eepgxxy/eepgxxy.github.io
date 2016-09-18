@@ -1,5 +1,29 @@
     {% if paginator.page == 1 %}
-      <img src="{{ sit.baseurl }}/images/homepage.jpg" alt="octojekyll-homepage">
+    <picture>
+	    <source
+	    	media="(max-width: 800px)" 
+			srcset="
+				{{ sit.baseurl }}/images/homepage-small.png 700w"
+	    >
+    	<source
+    	media="(min-width: 800px)" 
+		srcset="
+			{{ sit.baseurl }}/images/homepage.jpg 1280w"
+    	>
+    	<img src="{{ sit.baseurl }}/images/homepage.jpg" alt="octojekyll-homepage">
+    </picture>
     {% else %}
-      <img src="{{ sit.baseurl }}/images/homepage.jpg" alt="octojekyll-homepage">
+    <picture>
+	    <source
+	    	media="(max-width: 800px)" 
+			srcset="
+				{{ sit.baseurl }}/images/homepage-small.png 700w"
+	    >
+    	<source
+    	media="(min-width: 800px)" 
+		srcset="
+			{{ sit.baseurl }}/images/homepage.jpg 1280w"
+    	>
+    	<img src="{{ sit.baseurl }}/images/homepage.jpg" alt="octojekyll-homepage">
+    </picture>
     {% endif %}
