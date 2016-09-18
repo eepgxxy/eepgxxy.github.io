@@ -209,8 +209,8 @@
 
 // duoshuo.html
 .ds-thread {
-    // width: $content-width - $spacing-unit;
-    width: 800px;
+    width: $content-width - $spacing-unit;
+
     margin: 0 auto;
       @for $i from 0 through 5 {
         @include media-query($on-laptop - $i * 40) {
