@@ -5,7 +5,7 @@ date:   2017-02-27 20:06:00 +0800
 categories: blog
 ---
 I demonstrated a *lucky game* program using the HTML5 data api during the class. Here I will go a little more into the details for this api so that
-you can have a good understanding to the ins and outs of the powerful feature
+ you can have a good understanding to the ins and outs of this powerful feature
 being widely used in the web. 
 
 There are two user cases for the data api:
@@ -18,17 +18,17 @@ The user senarios are as simple as the ones described above. However, there
 are a few rules to follow.
 
 * :bell: The name of the data attribute in HTML can be the dash-style format
-* :bell: The name of the data attribute in HTML can not be capital letters
+* :bell: The name of the data attribute in HTML can not contain capital letters
 * :bell: The name of the data attribute in Javascript can only be camelCase
-* :bell: Name conversion(dash-style to camelCase and vice versa) is needed to use the data attribute in Javascript or in HTML
+* :bell: Name conversion(dash-style to camelCase and vice versa) is needed to manipulate the data attribute in Javascript or in HTML
 
 In the *lucky game* program I used the custom *data-id* attribute in the HTML
  to store the identifier data for each *to be clicked* area in the web page.
  I then get the stored identifier in the Javascript file.
 
-Although the main function of the data api is to store data for later access, it is more powerful than that. Many new user scenarios can be derived. Actually many Javascript libraries and frameworks are built based on the data API.
+Although the main function of the data api is to store data for later access, it is more powerful than that. Many new user scenarios can be derived from this basic feature. Actually many Javascript/CSS libraries and frameworks are built based on the data API.
 
-So please begin read the source codes for some of the popupar Javascript libraries and frameworks or begin practising with the data API to get professtional for the web development.
+So please begin read the source codes for some of the popupar Javascript/CSS libraries and frameworks or begin practising with the data API to get more professtional for the web development.
 
 
 
