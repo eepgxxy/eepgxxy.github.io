@@ -3,6 +3,7 @@ layout: post
 title:  "CSS Layout is Easier Than What You Think"
 date:   2016-10-26 23:06:00 +0800
 categories: blog
+id: 13
 ---
 CSS beginners are always frustrated with layout techniques when designing a web page. CSS layout is, in fact, much easier than what you think.
 

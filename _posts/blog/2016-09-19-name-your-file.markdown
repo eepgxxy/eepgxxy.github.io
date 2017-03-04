@@ -3,6 +3,7 @@ layout: post
 title:  "The Way to Name Your Folder and File"
 date:   2016-09-18 14:36:24 +0800
 categories: blog
+id: 12
 ---
 Students are often making mistakes to name their project folder and files when they first begin learning programming for the web. The most common mistakes or the way that is not suggested for naming folder and files are:
 

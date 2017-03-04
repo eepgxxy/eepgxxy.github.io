@@ -3,6 +3,7 @@ layout: post
 title:  "Getting More Powerful with the Data API"
 date:   2017-02-27 21:06:00 +0800
 categories: blog
+id: 14
 ---
 I demonstrated a *lucky game* program using the HTML5 data api during the class. Here I will go a little more into the details for this api so that
  you can have a good understanding to the ins and outs of this powerful feature

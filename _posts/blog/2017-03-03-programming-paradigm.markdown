@@ -3,6 +3,7 @@ layout: post
 title:  "Digging into the Programming Paradigm for Javascript"
 date:   2017-03-03 20:06:00 +0800
 categories: blog
+id: 15
 ---
 Programming paradigm is a huge topic that can not be easily covered in this single post. I am here just introduce the basic ideas of it for Javascript programming, mainly *Object Oriented Programming* and *Functional Programming*.
 

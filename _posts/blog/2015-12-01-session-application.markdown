@@ -3,6 +3,7 @@ layout: post
 title: "The Session and Application Objects in JSP"
 date: 2015-12-01 21:17:17 +0800
 categories: blog
+id: 8
 ---
 
 HTTP is a stateless protocol, which makes it difficult to share data between different user requests. The JSP objects **session** and **application** thus come to compensate the so-called drawbacks of HTTP.

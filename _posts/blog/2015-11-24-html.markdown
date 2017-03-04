@@ -3,6 +3,7 @@ layout: post
 title:  "HTML is the Skeleton of the Web!"
 date:   2015-11-24 22:26:24 +0800
 categories: blog
+id: 1
 ---
 HTML stands for **Hyper Text Markup Language** and it serves the base of the Web.
 

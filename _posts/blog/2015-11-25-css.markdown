@@ -3,6 +3,7 @@ layout: post
 title:  "CSS is for the decoration of the Web!"
 date:   2015-11-25 22:26:24 +0800
 categories: blog
+id: 3
 ---
 CSS stands for **Cascading Style Sheet** and it targets the styling of the Web.
 

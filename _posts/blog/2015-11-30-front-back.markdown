@@ -3,6 +3,7 @@ layout: post
 title: "Front-end vs. back-end"
 date:  2015-11-30 16:01:24 +0800
 categories: blog
+id: 5
 ---
 
 As a web developer, you will be either working as a **front-end** developer or a **back-end** developer, and sometimes as a **fullstack** developer.
