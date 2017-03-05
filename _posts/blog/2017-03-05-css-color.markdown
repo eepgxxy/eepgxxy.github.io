@@ -20,10 +20,10 @@ This is the most intuitive way to represent a color in CSS - just use the color 
 
 * Coding colors in CSS using **hexadecimal values**:
 
-This is probably the most browser compatible way to code a color in CSS. There are 255*255*255 different colors by this method, enough for us to use. Limitations are not so easy to remember and to code a known color. Usually we need some software tools to help us to design a color using hexademical codes. Color picker softwares will be a help.
+This is probably the most browser compatible way to code a color in CSS. There are 255\*255\*255 different colors by this method, enough for us to use. Limitations are: not so easy to remember and to code a known color. Usually we need some software tools to help us to design a color using hexademical codes. Color picker softwares will be a help.
 
 {% highlight css %}
-  #name {
+ #name {
     color: #f00;
  }
 {% endhighlight %}
@@ -33,18 +33,18 @@ This is probably the most browser compatible way to code a color in CSS. There a
 This is just a different representation form to the hexadecimal values. Each of the RGB color is represented by an integer number between 0 and 255 or an float number between 0% and 100%. It is a good method to use if you know very well how to design a color by mixing different amount of *red*, *green* and *blue*. You can also have a fourth value *Alpha* for the transparency control of the colors as a plus compared to the hexadecimal color codes.
 
 {% highlight css %}
-  #name {
-    color: #rgb(255, 0, 0);
+ #name {
+    color: rgb(255, 0, 0);
  }
 {% endhighlight %}
 
-* Coding colors in CSS using **HSL codes**:
+* Coding colors in CSS using **HSL values**:
 
 I would say this is the both intuitive and comprehensive way to code a color in CSS. **H** is for *hue* and the value is between 0 and 360, other values are allowed but will be recomputed by module 360. **S** stands for *saturation* and the value is between 0% and 100%. **L** stands for *lightness* and the value is also between 0% and 100%. Like *rgba*, *hsla* also adds the value for *alpha channel* to the color. Although *hsl* is an intuitive way to code color in CSS, it is not widely used as the other color coding methods. My guess is that most of the front-end developers are not very professional at using image processing softwares such as *photoshop* before diving into CSS coding. And in image processing softwares *hsl* is being widely used.
 
 {% highlight css %}
-  #name {
-    color: #hsl(0, 100%, 50%);
+ #name {
+    color: hsl(0, 100%, 50%);
  }
 {% endhighlight %}
 
