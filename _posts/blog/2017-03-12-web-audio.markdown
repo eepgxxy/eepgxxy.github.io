@@ -1,0 +1,82 @@
+---
+layout: post
+title:  "You Can be a Musician by Learning Web Audio API"
+date:   2017-03-12 20:06:00 +0800
+categories: blog
+id: 18
+---
+According to the specification:link:[Web Audio API Standard][W3CWebAudioAPI], the Web Audio API is a high-level JavaScript API for processing and synthesizing audio in web applications. In simple terms, you can manipulating sound, including but not limiting to generating, processing, synthesizing sound in the web page. This definitely broadens the way that you can design web application.
+
+As it is a fairely complex API and contains a lot of functionalities that can not be explained by a single short post, I am here giving a simple example of how to generate and manipulate sound.
+
+The diagram illustration is shown in figure 1 and the detail steps are shown as follows:point_down:
+
+![Web Audio Illustration](/images/AudioContext.png)
+-> Simple sound generation using Web Audio API <-
+
+* :bell:Creating *AudioContext*:
+
+AudioContext is the one of many *window's* objects. The following codes and the codes in later sections of this post are tested in *Chrome* only. 
+
+{% highlight javascript %}
+var ctx = new AudioContext();
+{% endhighlight %}
+
+* :bell:Creating *Oscillator*:
+
+Like in the physical world, sound comes from oscillation. So oscillator is the basic source for generating sound.
+
+{% highlight javascript %}
+var oscillator = ctx.createOscillator();
+{% endhighlight %}
+
+* :bell:Creating *Gain*:
+
+In order to control the volume of the sound, we need to attach a gain to the oscillator.
+
+{% highlight javascript %}
+var Gain = ctx.createGain();
+{% endhighlight %}
+
+* :bell:Setting up the audio manipulation chain:
+
+The Web Audio API works based on a chain model. We need to connect the oscillator to the gain and the gain to the default destination of the audio processing (normally speaker or earphone).
+
+{% highlight css %}
+oscillator.connect(gain);
+gain.connect(ctx.destination);
+{% endhighlight %}
+
+* :bell:Adjusting parameters of *Oscillator* and *Gain*:
+
+We can adjust the parapeters for *Oscillator* and *Gain*. The default values are in the following codes and thus can be omitted.
+
+{% highlight javascript %}
+oscillator.type = "sine";
+oscillator.frequency.value = 440;
+gain.gain.value = 1;
+{% endhighlight %}
+
+* :bell:Start the *Oscillator*:
+
+The *Oscillator* must be started to generate sound:sound:.
+
+{% highlight javascript %}
+oscillator.start();
+{% endhighlight %}
+
+* :bell:More controls can be added:
+
+We can add more stuff by using the movement of the mouse to control the frequency and gain value of the generated sound.
+
+{% highlight javascript %}
+document.onmousemove = function(e) {
+    oscillator.frequency.value = e.clientX/window.innerWidth*1000;
+    gain.gain.value = e.clientY/window.innerHeight*2;
+};
+{% endhighlight %}
+
+
+As show above, the **Web Audio API** is already powerful enough for you to develope your own web based audio studio:musical_note:.
+
+[W3CWebAudioAPI]: https://webaudio.github.io/web-audio-api/
