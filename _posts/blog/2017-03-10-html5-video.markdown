@@ -1,0 +1,55 @@
+---
+layout: post
+title:  "What You Can Do with the HTML5 Video API"
+date:   2017-03-10 22:06:00 +0800
+categories: blog
+id: 17
+---
+HTML5 video API has definitely changed the way how we can embed videos on the web. The old days of *flash* video everywhere on the web have passed away. HTML5 video API makes video on the web easier and brings more possibilities especially combined with the power of other HTML5 APIs such as *canvas*. There are a lot of things you can do with the video API. I summarize as follows:
+
+* :bell:Embedding a video on the web:
+
+This is obviously the most basic role of the video API. A simple *\<video\>* tag does all the job, no more plugins. You can style the video by using CSS any style you want. Because it is just a normal DOM element.
+
+{% highlight html %}
+<video width="600" controls>
+    <source src="example.mp4" type="video/mp4">
+    <source src="example.webm" type="video/webm">
+    <source src="example.ogv" type="video/ogg">
+    <track src="subtitles.vtt" default></track>
+</video>
+{% endhighlight %}
+
+* :bell: Controlling the video behavior using JavaScript:
+
+This is the true power of the Video API. You can manipulate the video anyway you want, by playing, pausing, stoping, getting the duration and the current playing time. In this way, a customized control panel becomes possible.
+
+{% highlight javascript %}
+var video = document.querySelector("video");
+video.play();
+video.pause();
+video.currentTime = video.duration;
+{% endhighlight %}
+
+* :bell: Combining video API with other APIs:
+
+This is how the potential comes with video API. A video is just a series of static images. You can manipulate each of the images from the video independently by drawing using canvas API. Once the whole video is copied as a series of images, you can do anything to the video that you can do on canvas.  
+
+{% highlight javascript %}
+var video = document.querySelector("video");
+var canvas = document.querySelector("canvas");
+video.onloadeddata = function() {
+    ctx.drawImage(video, 0, 0);
+};
+video.play = function() {
+    var draw = setInterval(function() {
+        if(video.currentTime <= video.duration) {
+            ctx.drawImage(video, 0, 0);
+        } else {
+            clearInterval(draw);
+        }
+    }, 30);
+}
+{% endhighlight %}
+
+I am sure that you have already realized the power of HTML5 video API. You can do more by combining video API with other web technologies. Only the skyline is the limit for your development now.
