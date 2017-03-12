@@ -5,18 +5,19 @@ date:   2017-03-12 20:06:00 +0800
 categories: blog
 id: 18
 ---
-According to the specification:link:[Web Audio API Standard][W3CWebAudioAPI], the Web Audio API is a high-level JavaScript API for processing and synthesizing audio in web applications. In simple terms, you can manipulating sound, including but not limiting to generating, processing, synthesizing sound in the web page. This definitely broadens the way that you can design web application.
+According to the specification:link:[Web Audio API Standard][W3CWebAudioAPI], the Web Audio API is a high-level JavaScript API for processing and synthesizing audio in web applications. In simple terms, you can manipulate sound, including but not limiting to generating, processing, synthesizing sound in the web pages. This definitely broadens the way that you can design for web applications.
 
-As it is a fairely complex API and contains a lot of functionalities that can not be explained by a single short post, I am here giving a simple example of how to generate and manipulate sound.
+As it is a fairely complex API and contains a lot of functionalities that can not be explained by a single short post, I am here just give a simple example of how to generate and manipulate sound.
 
-The diagram illustration is shown in figure 1 and the detail steps are shown as follows:point_down:
+The diagram illustration of sound manipulation is shown in the following figure and the detail steps are shown as follows:point_down:
 
 ![Web Audio Illustration](/images/AudioContext.png)
--> Simple sound generation using Web Audio API <-
+
+> Illustration of simple sound generation using Web Audio API
 
 * :bell:Creating *AudioContext*:
 
-AudioContext is the one of many *window's* objects. The following codes and the codes in later sections of this post are tested in *Chrome* only. 
+AudioContext is one of many *window*'s objects. The following codes and the codes in later sections of this post are tested in *Chrome* only. 
 
 {% highlight javascript %}
 var ctx = new AudioContext();
@@ -35,14 +36,14 @@ var oscillator = ctx.createOscillator();
 In order to control the volume of the sound, we need to attach a gain to the oscillator.
 
 {% highlight javascript %}
-var Gain = ctx.createGain();
+var gain = ctx.createGain();
 {% endhighlight %}
 
 * :bell:Setting up the audio manipulation chain:
 
 The Web Audio API works based on a chain model. We need to connect the oscillator to the gain and the gain to the default destination of the audio processing (normally speaker or earphone).
 
-{% highlight css %}
+{% highlight javascript %}
 oscillator.connect(gain);
 gain.connect(ctx.destination);
 {% endhighlight %}
@@ -67,7 +68,7 @@ oscillator.start();
 
 * :bell:More controls can be added:
 
-We can add more stuff by using the movement of the mouse to control the frequency and gain value of the generated sound.
+We can add more stuff by using the movement of the mouse to control the frequency and the gain value of the generated sound.
 
 {% highlight javascript %}
 document.onmousemove = function(e) {
