@@ -80,4 +80,17 @@ document.onmousemove = function(e) {
 
 As show above, the **Web Audio API** is already powerful enough for you to develope your own web based audio studio:musical_note:.
 
+Some of the Web Audio libraries and frameworks for references:
+
+:link:[pizzicato.js][pizzicato]
+:link:[webaudiox.js][webaudiox]
+:link:[howler.js][howler]
+:link:[wad.js][wad]
+:link:[tone.js][tone]
+
 [W3CWebAudioAPI]: https://webaudio.github.io/web-audio-api/
+[pizzicato]: https://alemangui.github.io/pizzicato/
+[webaudiox]: https://github.com/jeromeetienne/webaudiox
+[howler]: https://github.com/goldfire/howler.js
+[wad]: https://github.com/rserota/wad
+[tone]: https://tonejs.github.io/
