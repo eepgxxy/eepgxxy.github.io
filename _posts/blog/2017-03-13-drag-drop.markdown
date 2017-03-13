@@ -1,0 +1,96 @@
+---
+layout: post
+title:  "*dataTransfer* Object and Drag&amp;Drop"
+date:   2017-03-13 19:06:00 +0800
+categories: blog
+id: 19
+---
+*dataTransfer* object belongs to the event object during the *drag&amp;drop* operations. It provides a way of storing temporary data for use during *drag&amp;drop*. Let me show you what you can do with the *dataTransfer* object.
+
+* :bell:Storing temporary data:
+
+Data about the dragged DOM element can be stored in *dataTransfer* using *setData()* method and be retrieved during the drop stage. 
+
+{% highlight javascript %}
+dragElement.ondragstart = function(e) {
+    e.dataTransfer.setData("text/plain", e.target.id);
+}
+dropElement.ondrop = function(e) {
+    e.target.appendChild(e.dataTrnasfer.getData("text"));
+}
+{% endhighlight %}
+
+* :bell:Setting draged element icon:
+
+When you drag an element on the web page, you can set an custom icon near the mouse cursor to indicate that the element is being dragged.
+
+{% highlight javascript %}
+dragElement.ondragstart = function(e) {
+    e.dataTransfer.setDragImage(img, 10, 10);
+}
+{% endhighlight %}
+
+* :bell:Creating visual drag&amp;drop effect:
+
+There are three drag&amp;drop effects available, *copy*, *move* and *link*. They are mostly used to produce visual feedback to users when the dragged element is over the dropped area. The default drop effect for chrome is "copy".
+
+{% highlight javascript %}
+dragElement.ondragover = function(e) {
+    e.dataTransfer.dropEffect = "move";
+}
+{% endhighlight %}
+
+Besides the above three *dataTransfer* methods, let's recap other important points to note for performing a drag&amp;drop operation.
+
+* :bell:Make the element draggable:
+
+Not all elements in HTML are draggable by default. For example, images are draggable by default. For most of the elements, you have to set the *draggable* attribute to *true* in order to perform *drag&amp;drop* operations.
+
+{% highlight html %}
+<div id="source" draggable="true"></div>
+{% endhighlight %}
+
+* :bell:Drag&amp;drop events:
+
+There are eight drag&amp;drop events of which three for drag events and five for drop events:
+
+{% highlight javascript %}
+dragElement.ondragstart = function(e) {
+    //performing dragstart actions
+};
+dragElement.ondrag = function(e) {
+    //performing drag actions
+};
+dragElement.ondragend = function(e) {
+    //performing dragsend actions
+};
+dropElement.ondragenter = function(e) {
+    //performing actions when entering drop area
+};
+dropElement.ondragover = function(e) {
+    //performing actions when over drop area
+};
+dropElement.ondragleave = function(e) {
+    //performing actions when leaving drop area
+};
+dropElement.ondragexit = function(e) {
+    //performing actions when exiting drop area
+};
+dropElement.ondrop = function(e) {
+    //performing actions when being dropped on drop area
+};
+{% endhighlight %}
+
+* :bell:Preventing default behavior:
+
+When performing drag&amp;drop actions, the default behavior for some of the events must be prohibited, namely the dragover event. Of course you can prevent the default behavior for every drag&amp;drop stage to meet the browser compatibility requirement.
+
+{% highlight javascript %}
+dropElement.ondragover = function(e) {
+    e.preventDefault();
+};
+{% endhighlight %}
+
+You can find more information on the mozilla developer website:link:[mozillar developer][mozilladeveloper]
+
+[mozilladeveloper]: https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API
