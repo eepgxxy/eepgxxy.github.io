@@ -7,11 +7,11 @@ id: 20
 ---
 *Animation on the web* is a big topic for web design and development. Starting from this post, I will start a series of writings devoted to the animation on the web. Animation can make the web page dynamic, attracting, beautiful and holding more customers. Animation is also a key factor for web based game design and development. Different techniques can be used to make animations. In this post, I explain how to make animations using CSS.
 
-We all know the `:hover` pseudo-class produce a state-change effect for HTML element. However, It is not actually animations. There is no duration between the state-change. *CSS transition* is the CSS property to add the duration needed for animation. Besides, *CSS3* also provides `transform`, `keyframes` and `animation` properties.
+We all know the `:hover` pseudo-class produces a state-change effect for HTML element. However, It is not actually animations. There is no duration between the state-change. *CSS transition* is the CSS property to add the duration needed for animation. Besides, *CSS3* also provides `transform`, `keyframes` and `animation` properties.
 
 * :bell:CSS transition:
 
-There are four CSS transition properties available, `transition-property`, `transition-duration`, `transition-timing-function` and `transition-delay`. They can also be abbreviated to a single `transition` property. More transition-timing-function `cubic-bezier` values can be found in :link:[cubicbezier][cubicbezierref].
+There are four CSS transition properties available, `transition-property`, `transition-duration`, `transition-timing-function` and `transition-delay`. They can also be abbreviated to a single `transition` property. More transition-timing-function `cubic-bezier` values can be found in :link:[cubicbezier website][cubicbezierref].
 
 {% highlight css %}
 div {
@@ -70,7 +70,7 @@ div {
 
 * :bell:CSS media queries:
 
-Media queries are originaly designed for responsive web design and are still using for this purpose. By thinking the way how media qurie works, animations can be designed when the web page's size is being constantly adjusted, though it is not strictly an animation by definition.
+Media queries are originally designed for responsive web design and are still being used for this purpose. By thinking the way how media query works, animations can be designed when the web page's size is being constantly adjusted, though it is not strictly an animation by definition.
 
 {% highlight css %}
 @media screen and (min-width: 500px) {
@@ -92,4 +92,4 @@ Media queries are originaly designed for responsive web design and are still usi
 
 These are just basic ways to make animations using CSS.:tada:
 
-[[cubicbezierref]]: http://cubic-bezier.com
+[cubicbezierref]: http://cubic-bezier.com
