@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Web Animation using CSS"
+title:  "Web Animation Using CSS"
 date:   2017-03-14 20:30:00 +0800
 categories: blog
 id: 20
@@ -64,7 +64,7 @@ Any animation is just a series of keyframes. CSS3 provides the `@keyframes` rule
     }
 }
 div {
-    animation: mykeyframe cubic-bezier(.8, .5, .3, .7) 5s infinite alternate;
+    animation: mykeyframe cubic-bezier(.8, .5, .3, .7) 5s infinite alternate both;
 }
 {% endhighlight %}
 
