@@ -5,13 +5,13 @@ date:   2017-03-15 21:30:00 +0800
 categories: blog
 id: 21
 ---
-*JavaScript* is powerful enough to do any animations on the web. However, using plain valilla JavaScript to do the job may let us feel frustrating. Because there are just so much to do to make a big fantastic animation. This post just digs into the shallow but essential part of the deep water of JavaScript animation. 
+*JavaScript* is powerful enough to do any animations on the web. However, using plain vanilla JavaScript to do the job may let us feel frustrating. Because there are just so much to do to make a big fantastic animation. This post just digs into the shallow but essential part of the deep water of JavaScript animation. 
 
-*Animation* is just a series of movements or state changes following the timeline. In JavaScript, `setTimeout` and `setInterval` are two functions to deal with time and they are essential to making animations. With the power of these two function, you can make any animations by changing the position, color, behavior and any other properties of the HTML element.
+*Animation* is just a series of movements or state changes following the timeline. In JavaScript, `setTimeout` and `setInterval` are two functions to deal with time and they are essential to making animations. With the power of these two functions, you can make any animation by changing the position, color, behavior and any other properties of the HTML element.
 
 The following example shows a basic animation by using `setInterval` and *canvas* API.
 
-* :bell:Red ball constantly rotating around the center of the canvas:
+* :bell:Animation showing red ball constantly rotating around the center of the canvas:
 
 {% highlight javascript %}
 var canvas = document.querySelector("#myCanvas");
@@ -47,7 +47,7 @@ var m = setInterval(function() {
 }, 50);
 {% endhighlight %}
 
-We can even use the `requestAnimationFrame` method solely without the `setInterval` if all we want is a smooth optimized animation with 60 frames per second. The changed code  will be:
+We can even use the `requestAnimationFrame` method solely without the `setInterval` if all we want is a smooth optimized animation with 60 frames per second. In this case, the changed code  will be:
 
 {% highlight javascript %}
 window.requestAnimationFrame(draw);
