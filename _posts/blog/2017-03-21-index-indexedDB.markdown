@@ -5,9 +5,9 @@ date:   2017-03-21 22:30:00 +0800
 categories: blog
 id: 24
 ---
-Database has always been a *must have* in web development. It is usually located on the web server and using it is a required skill for back-end developers. Things have now changed, because front-end developers are now having a localized database called *indexedDB* in the browser side.
+Database has always been a *must-have* in web development. It is usually located on the web server and using it is a required skill for back-end developers. Things have now been changed, because front-end developers are now having a localized database called *indexedDB* in the browser side.
 
-*indexedDB* is now the only recommended database standard by the *W3C*. *WebSQL* is only supported by some browsers, like Google Chrome. Knowing how to use *indexedDB* can bring front-end developers more possibilities when dealing with complex data in the client side, thus creating more diverse application scenarios. However, what is exactly *index* in the *indexedDB*.
+*indexedDB* is now the only recommended database standard by the *W3C*. *WebSQL*, as an alternative, is only supported by some browsers, like Google Chrome. Knowing how to use *indexedDB* can bring front-end developers more possibilities when dealing with complex data in the client side, thus creating more diverse application use scenarios. However, what is exactly *index* in the *indexedDB*?
 
 Before digging into the ins and outs of *index*, we need to know the basics of how indexedDB works. *indexedDB* is a *window* object. It is a type of NoSQL database. This means, you can store JavaScript objects inside *indexedDB*.
 
@@ -18,13 +18,13 @@ var request = indexed.open("students", 1);
 //"students" is the database name and 1 is the version number of the database
 {% endhighlight %}
 
-Like SQL type databases, you then need to create a table and the different fields in the database. It is called `store` in *indexedDB*.
+Like SQL type databases, you then need to create a table and the different fields in the table of the database. It is called `store` in *indexedDB*.
 
 {% highlight javascript %}
 request.onupgradeneeded = function() {
     var rq = this.result;
     var store = rq.createObjectStore("class1", {keyPath: "id"});
-    //keyPath is primary key of the database
+    //keyPath is the primary key of the database
     store.createIndex("index1", "id", {unique: true});  
     store.createIndex("index2", "name", {unique: false});  
     store.createIndex("index3", "score", {unique: false});  
@@ -32,16 +32,16 @@ request.onupgradeneeded = function() {
 };
 {% endhighlight %}
 
-From the above code we can see that the index of each field is created. This is used for later query as *query* is the most important function of a database. It is compulsory to put *index* as the first parameter of `createIndex()` method.
+From the above code we can see that the *index* of each field is created. This is used for later query as *query* is the most important function of a database. Just remember, it is compulsory to set *index* as the first parameter of `createIndex()` method.
 
-The *CRUD* operations of *indexDB* is easy. It is all about how to use the APIs.
+Performing *CRUD* operations for *indexDB* is easy. It is all about how to use the APIs.
 
 {% highlight javascript %}
 request.onsuccess = function() {
     var rq = this.result;
     var transaction = rq.transaction(["class1"], "readwrite");
     //create transaction of the object stores
-    var store = transaction.objectStore("class");
+    var store = transaction.objectStore("class1");
     //fetch a particular store from the transaction
     store.add({id: 1, name: "xiaoming", score: 99});
     store.add({id: 2, name: "xiaohei", score: 89});
@@ -68,5 +68,5 @@ request.onsuccess = function() {
 };
 {% endhighlight %}
 
-It is already obvious that the *index* in *indexedDB* is a query tag for search. You must manually create them for later use. The *index* can also be clearly seen in the browser developer tools under the *Application* section for Google Chrome. It is of course in other browsers but the section name may be different.
+It is already obvious that the *index* in *indexedDB* is a query tag for search. You must manually create them for later use. The *index* can also be clearly seen in the browser developer tools under the *Application* section for Google Chrome. It is of course in other browsers as well, but the section name may be different.
 
