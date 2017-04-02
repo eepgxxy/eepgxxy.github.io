@@ -1,0 +1,87 @@
+---
+layout: post
+title:  "When Less is More"
+date:   2017-03-29 15:30:00 +0800
+categories: blog
+id: 26
+---
+CSS is already becoming more and more complex. Adding something else to it doesn’t make it more complex? The answer is no. Because it depends what you are going to add to it. CSS preprocessors are the things that are added to CSS and make CSS look more elegent, easier to maintain and faster to write.
+
+CSS preprocessors bring the things that a normal programming language has by default but CSS lacks, such as variables, functions, loops, etc.. There are mainly three different kinds of CSS preprocessors: [LESS][LESS]:link:, [SASS][SASS]:link: and [STYLUS][STYLUS]:link:. The workflow is as follows: You first write the preprocessor code, then compile it either before or in the run time into CSS code. 
+
+*LESS* is a fairely easier one among the three preprocessors. So let's start with *LESS* first.
+
+A typical *LESS* code is as follows:
+
+{% highlight css %}
+.box {
+  color: #000;
+}
+@base: #abcdef;
+.div {
+  color: saturate(@base, 5%);
+  border-color: lighten(@base, 20%);
+  p {
+    .box;
+  }
+}
+{% endhighlight %}
+
+The compiled CSS code is:
+
+{% highlight css %}
+.box {
+  color: #000;
+}
+.div {
+  color: #a8cdf2;
+  border-color: #ffffff;
+}
+.div p {
+  color: #000;
+}
+{% endhighlight %}
+
+The codes above are all self-explainatary. You can already see the power of *LESS* such as variables, mixin (a function in *LESS*'s language) and nesting. 
+The other typical features of *LESS* are: math and iterations.
+
+* :bell: Math in *LESS*:
+
+`calc()` is already supported by most of the morden browsers. With *LESS*, math is as easy as a breeze:
+
+{% highlight css %}
+@blue: #00c;
+@light_blue: @blue + #333;
+@dark_blue: @blue - #333;
+{% endhighlight %}
+
+* :bell: Iterations in *LESS*:
+
+*LESS* does not have loop key words such as `for` and `while`. However, we can make loops by making recursive mixins.
+
+{% highlight css %}
+.screen(@index: 12, @width: 1100px, @i: 1) when (@index <= 3){
+    #img@{i} {
+        z-index: @index;
+        @media screen and (max-width: @width) {
+            display: none;
+        }
+    }  
+    .screen(@index - 1, @width - 50, @i + 1);
+}
+{% endhighlight %}
+
+Finally, we come to the point of how to incorporate *LESS* into our daily projects. There are mainly two ways to utilize *LESS*. *LESS* can be installed using the command line by `npm install less -g`. In this way, using *LESS* is as easy as typing `lessc source.less destination.css`. LESS can also be used directly in the browser by including the following code into the HTML file:
+
+{% highlight html %}
+<link rel="stylesheet/less" type="text/less" href="styles.less">
+<script>less = { env: "development" };</script>
+<script src="less.js"></script>
+<script>less.watch();</script>
+{% endhighlight %}
+
+If you already know CSS well, it won't take long for you to master *LESS*. And once you have mastered the power of *LESS*, you will not be willing to go back to pure CSS again.:wink:
+
+[LESS]: http://lesscss.org/
+[SASS]: http://sass-lang.com/
+[STYLUS]: http://stylus-lang.com/

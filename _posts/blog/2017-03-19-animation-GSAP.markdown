@@ -21,7 +21,8 @@ tl.to(ball, 4, {
             {left: 450, top: 300},
             {left: 300, top: 450},
             {left: 150, top: 300},
-            {left: 300, top: 150}
+            {left: 300, top: 150},
+            {left: 450, top: 300}
         ]
     },
     repeat: -1, //repeate infinitely
