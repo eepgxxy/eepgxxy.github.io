@@ -30,9 +30,9 @@ $http.get("data.json")
 });
 {% endhighlight %}
 
-This is fine if you put `$http` service in your *Controller* file. However, if you make the ajax call in your custom defined *Services*, then things will be different because of the asynchronous nature of ajax. 
+This works if you put `$http` service in your *Controller* file. However, if you make the ajax call in your custom defined *Services*, then things will be different because of the asynchronous nature of ajax. 
 
-Returning data from service to controller in *angularJS* can be hard at first sight, because the returned data can not be visible (being **undefined**) when the controller begins use it. There are three solutions to the above mentioned problem:
+Returning data from service to controller in *angularJS* can be hard at first sight, because the returned data is no longer being visible (being **undefined**) when the controller begins use it. There are three solutions to the above mentioned problem:
 
 * Utilizing the $q service
 
@@ -89,18 +89,18 @@ myApp.controller('myController', ['$scope', 'myService', function($scope, myServ
 }]);
 {% endhighlight %}
 
-* Utilize the $resource service
+* Utilizing the $resource service
 
 For this solution, what you need to do is two steps:
 
-1. include the 'angular-resource.min.js' in the *html* file
-2. inject the module dependency to the module creation js file like follows:
+1. Include the 'angular-resource.min.js' in the *html* file
+2. Inject the module dependency to the module creation js file like follows:
 
 {% highlight javascript %}
 var eventsApp = angular.module('eventsApp', ['ngResource']);
 {% endhighlight %}
 
-3.create the *$resource* service in the service js file:
+3.Create the *$resource* service in the service js file:
 
 {% highlight javascript %}
 eventsApp.factory('eventData', function($resource){
@@ -111,7 +111,7 @@ eventsApp.factory('eventData', function($resource){
   });
 {% endhighlight %}
 
-4.inject the *$resource* service into the controller js file:
+4.Inject the *$resource* service into the controller js file:
 
 {% highlight javascript %}
   $scope.event = eventData.getEvent().get(function(response) {
