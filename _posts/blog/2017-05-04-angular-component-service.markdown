@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Mastering Component and Services in Angular"
-date:   2017-05-03 23:00:00 +0800
+date:   2017-05-04 23:00:00 +0800
 categories: blog
-id: 37
+id: 38
 ---
 
 *Component* is the key concept in *Angular*. It is an UI class with *selectors*, *template*, and other metadatas. It is the main way in *Angular* to build and specify elements and logic on the page. You can reuse it across your apps. Your whole app can be regarded as a tree of components as illustrated in the following figure:point_down:.

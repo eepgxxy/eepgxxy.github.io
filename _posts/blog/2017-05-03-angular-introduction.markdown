@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Introduction to Angular - Version 2 and Beyond"
-date:   2017-05-02 23:00:00 +0800
+date:   2017-05-03 23:00:00 +0800
 categories: blog
-id: 36
+id: 37
 ---
 
 *Angular* is the word for referring to the Angular version 2 and beyond, while *angularJS* is speciffically referring to the angular version 1. *Angular* is different from *angularJS* both from inside and from outside. It can even be regarded as a totally different framework compared to *angularJS*;

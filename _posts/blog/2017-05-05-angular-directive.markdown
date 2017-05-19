@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "The Basics of Directives in Angular"
-date:   2017-05-04 23:00:00 +0800
+date:   2017-05-05 23:00:00 +0800
 categories: blog
-id: 38
+id: 39
 ---
 
 *Directives* provide a variety of ways to abstract the HTML UI elements, attributes, classes, expressions and styles. There are tons of use cases in *Angular* for *Directives* which are described as follows:
