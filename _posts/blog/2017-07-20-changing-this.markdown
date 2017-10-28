@@ -6,7 +6,7 @@ categories: blog
 id: 40
 ---
 
-*This* is the key word in JavaScript to refer to the object that invokes a function. Normally a function is bound to an object from which it is being invoked. If the function is a method of an object, that object is responsible for invoking the function. Otherwise, the global object, normally the *window* object becomes the default object. Sometimes we need to change the object to another object for invoking the function. This is normally required when we want to apply the method of an object to another object.
+'*This*' is the key word in JavaScript to refer to the object that invokes a function. Normally a function is bound to an object from which it is being invoked. If the function is a method of an object, that object is responsible for invoking the function. Otherwise, the global object, normally the *window* object becomes the default object. Sometimes we need to change the object to another object for invoking the function. This is normally required when we want to apply the method of an object to another object.
 
 There are three methods being built in JavaScript to finish the "changing invoking object" task. They are *call*, *apply* and *bind*. Let's look at them one by one.
 
