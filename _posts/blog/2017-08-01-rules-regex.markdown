@@ -78,6 +78,6 @@ The more powerful feature of *replace* is that the second parameter can be a fun
 *exec* returns detail matching info as an object.
 
 {% highlight javascript %}
-/\D/.test("hello world");
+/\D/.exec("hello world");
 {% endhighlight %}
 
