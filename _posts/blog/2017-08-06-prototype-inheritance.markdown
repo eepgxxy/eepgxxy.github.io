@@ -6,7 +6,7 @@ categories: blog
 id: 44
 ---
 
-Prototype is the unique feature of JavaScript used for inheritance. JavaScript is an object based programming languange. However, there is no definition of *class* as those traditional class based programming languages such as C++ and Java. In order to minic the features of class, JavaScript uses *prototype*.
+Prototype is the unique feature of JavaScript used for inheritance. JavaScript is an object based programming languange. However, there is no definition of *class* as those traditional class based programming languages such as C++ and Java. In order to mimic the features of class, JavaScript uses *prototype*.
 
 Prototype is the feature of a function when the function is being used as a *constructor* function. When a function is invoked as a constructor function, the *this* is bound to the newly created object instance for instantiation. And the newly created object gets inheritance not only from the parent constructor function but also from the prototype property of the parent constructor function. This is called prototype inheritance.
 
@@ -45,7 +45,7 @@ person1.walk(); // false
 
 So how the object find which property value it should use when it need to access a property name. Here comes the prototype chain.
 
-When a property value is needed, the object first looks at its own properties list, if it finds the properity name, the value is used. Otherwise, its constructor's prototype is searched, if it finds the properity name, the value on the constructor's prototype is used. Otherwise, its constructor's constructor's prototype is searched and so on until the prototype of the *Object* is searched. If nothing is found along the prototype chain, then *undefined* is returned.
+When a property value is needed, the object first looks for its own properties list, if it finds the properity name, the value is used. Otherwise, its constructor's prototype is being searched, if it finds the properity name, the value on the constructor's prototype is used. Otherwise, its constructor's constructor's prototype is being searched and so on until the prototype of the *Object* is being searched. If nothing is found along the prototype chain at the end, then *undefined* is returned.
 
 {% highlight javascript %}
 function Person(){}
